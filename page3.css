@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  --primary-color: #F5ACBD;
+  --secondary-color: #FFFFFF;
+  --thidle-color: #F08D9F;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Press Start 2P', system-ui;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  height: 100vh;
+}
+
+.header {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20%;
+}
+
+#backButton {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: var(--secondary-color) 3px solid;
+  width: 80px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#backButton:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80%;
+}
+
+#block {
+  position: absolute;
+  width: 430px;
+  height: 150px;
+  bottom: 0;
+  background-color: var(--thidle-color);
+  z-index: -1;
+}
+
+#apeach {
+  position: absolute;
+  top: 20px;
+  animation: swing 1.5s ease-in-out infinite;
+}
+
+@keyframes swing {
+  0% { 
+    transform: rotate(-2deg);
+    top: 20px;
+  }
+  50% { 
+    transform: rotate(2deg);
+    top: 19px;
+  }
+  100% {
+    transform: rotate(-2deg);
+    top: 20px;
+  }
+}
+
+#loader {
+  position: absolute;
+  bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  color: var(--secondary-color);
+  font: 1em 'Press Start 2P', system-ui;
+}
+
+progress[value] {
+  width: 10.5em;
+  height: 0.15em;
+  border: none;
+  border-radius: 0.125em;
+  background-color: var(--primary-color);
+}
+
+progress[value]::-webkit-progress-bar {
+  border: none;
+  border-radius: 0.125em;
+  background: var(--primary-color);
+}
+
+progress[value]::-webkit-progress-value {
+  border: none;
+  border-radius: 0.125em;
+  background: linear-gradient(90deg, var(--secondary-color));
+}
+
+/* Firefox */
+progress[value]::-moz-progress-bar {
+  border: none;
+  border-radius: 0.125em;
+  background: linear-gradient(90deg, var(--secondary-color));
+}
+
+/* IE */
+progress[value]::-ms-fill {
+  border: none;
+  border-radius: 0.125em;
+  background: linear-gradient(90deg, var(--secondary-color));
+}
+
+output:not(:empty) {
+  padding-bottom: 1em;
+}
+
+output:not(:empty):after {
+  content: '%';
+}

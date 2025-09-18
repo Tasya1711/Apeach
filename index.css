@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  --primary-color: #F5ACBD;
+  --secondary-color: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Press Start 2P", system-ui;
+}
+
+body {
+  background: var(--primary-color);
+  height: 100vh;
+}
+
+#container__top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 40%;
+  gap: 25px;
+  color: var(--secondary-color);
+  letter-spacing: 2px;
+}
+
+#container__top h1 {
+  font-size: 24px;
+}
+
+#container__top h3 {
+  font-size: 12px;
+}
+
+#container__bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 60%;
+  gap: 15px;
+  color: var(--secondary-color);
+  letter-spacing: 2px;
+}
+
+#container__bottom p {
+  font-size: 10px;
+}
+
+.container__bottom__img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#apeach {
+  animation: swing 2s ease-in-out infinite;
+}
+
+@keyframes swing {
+  0% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+  100% { transform: rotate(-2deg); }
+}
+
+#my-button {
+  position: absolute;
+  bottom: 15px;
+  right: -60px;
+  background: var(--primary-color);
+  border: var(--secondary-color) 3px solid;
+  border-radius: 10px;
+  width: 80px;
+  height: 30px;
+  cursor: pointer;
+  color: var(--secondary-color);
+  font-size: 8px;
+}
+
+#my-button:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  font-weight: bold;
+  transition: 0.3s;
+}

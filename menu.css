@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  --primary-color: #F5ACBD;
+  --secondary-color: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Press Start 2P', system-ui;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  height: 100vh;
+}
+
+.header {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20%;
+}
+
+#backBtn {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: var(--secondary-color) 3px solid;
+  width: 80px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#backBtn:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80%;
+}
+
+#apeach-menu {
+  position: absolute;
+  top: -20px;
+  animation: swing 2s ease-in-out infinite;
+}
+
+@keyframes swing {
+  0% { 
+    transform: rotate(-2deg);
+    top: -20px;
+  }
+  50% { 
+    transform: rotate(2deg);
+    top: -21px;
+  }
+  100% {
+    transform: rotate(-2deg);
+    top: -20px;
+  }
+}
+
+#btn {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 10px;
+  margin-top: 100px;
+}
+
+#btn button {
+  background-color: var(--primary-color);
+  border: var(--secondary-color) 3px solid;
+  width: 125px;
+  height: 31px;
+  cursor: pointer;
+  color: var(--secondary-color);
+  font-size: 9px;
+  border-radius: 10px;
+}
+
+#btn button:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-weight: bold;
+  transition: 0.3s;
+}

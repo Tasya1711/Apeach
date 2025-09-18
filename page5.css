@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  --primary-color: #F08D9F;
+  --secondary-color: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P', system-ui;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  height: 100vh;
+}
+
+.header {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20%;
+}
+
+#backButton3 {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: var(--secondary-color) 3px solid;
+  width: 80px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#backButton3:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80%;
+}
+
+#loader {
+  position: absolute;
+  bottom: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  color: var(--secondary-color);
+  font: 1em 'Press Start 2P', system-ui;
+}
+
+progress[value] {
+  width: 10.5em;
+  height: 0.15em;
+  border: none;
+  border-radius: 0.125em;
+  background-color: var(--primary-color);
+}
+
+progress[value]::-webkit-progress-bar {
+  border: none;
+  border-radius: 0.125em;
+  background: var(--primary-color);
+}
+
+progress[value]::-webkit-progress-value {
+  border: none;
+  border-radius: 0.125em;
+  background: linear-gradient(90deg, var(--secondary-color));
+}
+
+/* Firefox */
+progress[value]::-moz-progress-bar {
+  border: none;
+  border-radius: 0.125em;
+  background: linear-gradient(90deg, var(--secondary-color));
+}
+
+/* IE */
+progress[value]::-ms-fill {
+  border: none;
+  border-radius: 0.125em;
+  background: linear-gradient(90deg, var(--secondary-color));
+}
+
+output:not(:empty) {
+  padding-bottom: 1em;
+}
+
+output:not(:empty):after {
+  content: '%';
+}
+
+#apeach {
+  position: absolute;
+  bottom: 20px;
+  z-index: 0;
+}
+
+.sleeping {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 120px;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.sleeping span {
+  color: var(--secondary-color);
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 20px;
+  opacity: 0;
+  animation: sleep 9s infinite linear;
+}
+
+.sleeping span:nth-child(2n) {
+  animation-delay: 3s;
+}
+
+.sleeping span:nth-child(3n) {
+  animation-delay: 6s;
+}
+
+@-webkit-keyframes sleep {
+  0% {
+    opacity: 0;
+    transform: translate(0) scale(0.3);
+  }
+  1% { opacity: 0; }
+  3% { opacity: 1; }
+  50% {
+    transform: translate(90%, -50%) scale(0.65);
+  }
+  75% { opacity: 1; }
+  100% {
+    opacity: 0;
+    transform: translate(180%, -100%) scale(1);
+  }
+}
+
+@-moz-keyframes sleep {
+  0% {
+    transform: translate(0, 0) scale(0.3);
+    opacity: 0;
+  }
+  1% { opacity: 0; }
+  3% { opacity: 1; }
+  50% {
+    transform: translate(90%, -50%) scale(0.65);
+  }
+  75% { opacity: 1; }
+  100% {
+    transform: translate(180%, -100%) scale(1);
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes sleep {
+  0% {
+    transform: translate(0, 0) scale(0.3);
+    opacity: 0;
+  }
+  1% { opacity: 0; }
+  3% { opacity: 1; }
+  50% {
+    transform: translate(90%, -50%) scale(0.65);
+  }
+  75% { opacity: 1; }
+  100% {
+    transform: translate(180%, -100%) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes sleep {
+  0% {
+    transform: translate(0, 0) scale(0.3);
+    opacity: 0;
+  }
+  1% { opacity: 0; }
+  3% { opacity: 1; }
+  50% {
+    transform: translate(90%, -50%) scale(0.65);
+  }
+  75% { opacity: 1; }
+  100% {
+    transform: translate(180%, -100%) scale(1);
+    opacity: 0;
+  }
+}
