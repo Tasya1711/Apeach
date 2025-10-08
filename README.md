@@ -12,6 +12,11 @@ You can:
 💤 Let her sleep  
 
 This project doesn’t aim to do anything serious — it was created purely for fun and to practice building desktop apps using **Electron**.
+# Technologies Used
+* Electron
+* HTML
+* CSS
+* Java Script
 # Video
 <div align="center">
   <img src="apeach.gif" width="400" alt="Apeach Demo">
