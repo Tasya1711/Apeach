@@ -18,7 +18,6 @@
     "electronmon": "^2.0.3"
   },
   "build": {
-    "appId": "com.example.myapp",
     "productName": "Apeach",
     "directories": {
       "output": "dist"
