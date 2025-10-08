@@ -1,0 +1,40 @@
+{
+  "name": "widgets",
+  "version": "1.0.0",
+  "description": "hello world",
+  "main": "main.js",
+  "scripts": {
+    "start": "electronmon .",
+    "dist": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Natasha",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^38.1.0",
+    "electron-builder": "^26.0.12",
+    "electronmon": "^2.0.3"
+  },
+  "build": {
+    "appId": "com.example.myapp",
+    "productName": "Apeach",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "img/kakaopeach.icns"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}
